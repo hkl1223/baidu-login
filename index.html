@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度一下，你就知道</title>
+    <script src="//at.alicdn.com/t/font_2068941_esf2pu3dc2.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <img src="http://baidulogo.bj.bcebos.com/logo/7yeju1jeojng9xk624o90am666d7vx13.gif" alt="">
+    <div class="wrapper">
+        <span class="inputwrapper">
+            <span class="floatDiv">
+               <svg class="icon">
+                <use xlink:href="#icon-cc-mic"></use>
+               </svg>
+               <span class="tooltiptext">语音搜索</span>
+            <span class="splitLinee"></span>
+            <svg class="icon icon-2">
+                <use class xlink:href="#icon-camera"></use>
+               </svg>
+               <span class="tooltiptext2">图片搜索</span>
+        </span>
+        </span>
+        <input id="keyword" type="text">
+        <button>百度一下</button>   
+        <ul id="suggestion" class="suggestion">
+            <li>选项1</li>
+            <li>选项2</li>
+            <li>选项3</li>
+            <li>选项4</li>
+        </ul>
+       
+     </div>
+</body>
+<script>
+    keyword.oninput = function(e){
+  if(keyword.value){
+    suggestion.classList.add('active')
+  }else{
+    suggestion.classList.remove('active')
+  }
+}
+</script>
+</html>

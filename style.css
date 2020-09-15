@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::before,::after{
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+
+body{
+    border: 1px solid red;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+   display: flex;
+   position: relative;
+}
+.suggestion{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+}
+.suggestion.active{
+    display: block;
+}
+.inputwrapper{
+    position: relative;
+    display: inline-block;
+}
+.floatDiv{
+    position: absolute;
+    right: -516px;
+    top: 0px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b8b8b8;
+
+}
+.splitLinee{
+    width: 0px;
+    height: 16px;
+    border-left: 1px solid;
+    margin: 0 10px;
+}
+.inputwrapper{
+    float: left;
+}
+.inputwrapper + button {
+    float: left;
+}
+input[type=text]{
+    border: 1px solid #b8b8b8;
+    border-radius: 3px 0px 0px 3px;
+    width: 540px;
+    height: 35px;
+    padding-left: 8px;
+ 
+}
+input[type=text]:focus{
+    outline: none;
+    border-color: #4b94fc;
+    border-radius: 3px 0px 0px 3px;
+}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.inputwrapper svg.icon{
+    width: 20px;
+    height: 20px;
+    fill: #b8b8b8;
+}
+.inputwrapper svg.icon:hover{
+    fill: #4b94fc;
+    cursor: pointer;
+}
+
+button{
+    background: #4b94fc;
+    border: none;
+    border-radius: 0px 3px 3px 0px;
+    font-size: 14px;
+    color: #fff;
+    padding:0 20px;
+}
+button:focus{
+    outline: none;
+}
+button:hover{
+    box-shadow: 1px 1px 1px 0 rgb(0,0,0,0.2);
+    background: #4662d9;
+}
+.inputwrapper svg.icon{
+   position: relative;
+   display: inline-block;
+}
+.tooltiptext{
+    visibility: hidden;
+    width: 92px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px 1px rgb(0,0,0,0.1);
+    color: #b8b8b8;
+    text-align: center;
+    border-radius: 3px;
+    padding:5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 300%;
+    left: -14%;
+    margin: -60px;
+}
+
+.inputwrapper svg.icon:hover ~.tooltiptext{
+    visibility: visible;
+}
+.tooltiptext2{
+    visibility: hidden;
+    width: 92px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px 1px rgb(0,0,0,0.1);
+    color: #b8b8b8;
+    text-align: center;
+    border-radius: 3px;
+    padding:5px 0;
+    position: absolute;
+    z-index: 1;
+    top:300%;
+    left: 165%;
+    margin: -60px;
+}
+.inputwrapper svg.icon-2:hover ~.tooltiptext2{
+    visibility: visible;
+}
+img{
+    width: 300px;
+    position: absolute;
+    top: 100px;
+}
